@@ -2,6 +2,7 @@ package com.jsp.wh.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jsp.wh.requestdto.AdminRequest;
+import com.jsp.wh.requestdto.WarehouseRequest;
 import com.jsp.wh.responsedto.AdminResponse;
 import com.jsp.wh.service.AdminService;
  
@@ -40,9 +42,9 @@ public class AdminController {
 		return adminService.addSuperAdmin(adminRequest);
 	}
 	  
-	  @PostMapping("/admins")
-	  public ResponseEntity<ResponseStructure<AdminResponse>> createdAdmin ( @RequestBody AdminRequest adminRequest){
-		  return adminService.createAdmin(adminRequest);
+	  @PostMapping("warehouses/{warehouseid}/admins")
+	  public ResponseEntity<ResponseStructure<AdminResponse>> createdAdmin ( @RequestBody AdminRequest adminRequest  ,int warehouseId ){
+		  return adminService.createAdmin(adminRequest,  warehouseId);
 	  }
 	  
 	  

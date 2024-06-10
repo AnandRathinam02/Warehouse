@@ -24,8 +24,15 @@ public class AdminRequest {
 			+ " contain at least one letter, one number, one special character")
 	private String password ;
 	
+	private int warehouseId;
 	 
 	
+	public int getWarehouseId() {
+		return warehouseId;
+	}
+	public void setWarehouseId(int warehouseId) {
+		this.warehouseId = warehouseId;
+	}
 	public String getName() {
 		return name;
 	}
