@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+ 
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jsp.wh.requestdto.AdminRequest;
@@ -38,6 +39,11 @@ public class AdminController {
 	public ResponseEntity<ResponseStructure<AdminResponse>> addSuperAdmin( @RequestBody  @Valid AdminRequest adminRequest){
 		return adminService.addSuperAdmin(adminRequest);
 	}
+	  
+	  @PostMapping("/admins")
+	  public ResponseEntity<ResponseStructure<AdminResponse>> createdAdmin ( @RequestBody AdminRequest adminRequest){
+		  return adminService.createAdmin(adminRequest);
+	  }
 	  
 	  
 

@@ -10,4 +10,6 @@ public  interface AdminService {
 
 	ResponseEntity<ResponseStructure<AdminResponse>> addSuperAdmin(AdminRequest adminRequest);
 
+	ResponseEntity<ResponseStructure<AdminResponse>> createAdmin(AdminRequest adminRequest);
+
 }
