@@ -12,8 +12,18 @@ public class Warehouse {
     @GeneratedValue( strategy = GenerationType.IDENTITY)
 	private int warehouseId;
 	private String name ;
+	private int totalCapacity;
+
+	public int getTotalCapacity() {
+		return totalCapacity;
+	}
+	public void setTotalCapacity(int totalCapacity) {
+		this.totalCapacity = totalCapacity;
+	}
 	@OneToOne
 	private  Admin admin;
+	
+	
 	public int getWarehouseId() {
 		return warehouseId;
 	}
