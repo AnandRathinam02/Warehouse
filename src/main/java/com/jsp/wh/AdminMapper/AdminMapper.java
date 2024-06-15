@@ -30,7 +30,8 @@ public class AdminMapper {
 		 adminResponse.setAdminId(admin.getAdminId());
 		 adminResponse.setName(admin.getName());
 		 adminResponse.setEmail(admin.getEmail());
-		 adminResponse.setAdminType(admin.getAdminType()); 
+		 adminResponse.setAdminType(admin.getAdminType());
+		 
 		 return adminResponse;
 	}
 
